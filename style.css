@@ -1,7 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+@font-face {
+  font-family: 'AO Mono';
+  src: url('/AOMono-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AO Mono';
+  src: url('/AOMono-Bold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AO Mono';
+  src: url('/AOMono-Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'AO Mono', sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+p {
+  font-weight: 300;
 }
 
 #siteWrapper {
