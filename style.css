@@ -50,7 +50,7 @@ p {
 
 .imageStyle {
   display: flex;
-  margin: 10px;
+  margin: 20px;
   width: 23%;
   height: 23%;
 }
@@ -79,7 +79,7 @@ p {
 .nav-item {
   margin: 10px;
   text-decoration: none;
-  color: #53168b;
+  color: #ED1B58;
   font-size: 20px;
   text-align: center;
 }
