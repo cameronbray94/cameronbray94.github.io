@@ -24,6 +24,7 @@
 
 body {
   font-family: 'AO Mono', sans-serif;
+  margin: 0px;
 }
 
 h1 {
@@ -107,4 +108,23 @@ a {
   display: flex;
   width: 75%;
   margin: 0 auto;
+}
+
+.bodyWithHeaderSillyColour {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ED1B58;
+  color: white;
+}
+
+.nav-item-inverse {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(170, 20, 12);
+  text-align: center;
 }
