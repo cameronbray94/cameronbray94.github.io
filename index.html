@@ -6,17 +6,23 @@
     <meta name="author" content="Sam Green">
     <meta name="description" content="Camerons Portfolio">
     <link rel="stylesheet" href="style.css" type="text/css">
-    
+    <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">  
   </head>
 
   <body>
-    <div id="siteWrapper">
-      <div id="innerWrapper">
-        <a class="imageStyle" href="digestion.html"><img class="innerImage" src="img/digester.jpeg" alt="Digester"/></a>
-        <a class="imageStyle" href="map.html"><img class="innerImage" src="img/digester.jpeg" alt="Digester"/></a>
-        <img class="imageStyle" src="img/iso-grid.jpg" alt="Iso"/>
-        <img class="imageStyle" src="img/roadbike.jpeg" alt="RoadBike"/>
-      </div>
-    </div>
+    <!-- <div id="navbar">
+      <a href="index.html">
+        <div class="nav-item">CAMERON BRAY</div>
+      </a>
+    </div> -->
+    <div class="bodyWithHeader">
+      <!-- <div class="embeddedObservable" id="observablehq-741ad44a"></div> -->
+      <div class="embeddedObservable" id="observablehq-d98fa37d"></div>
+      <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import define from "https://api.observablehq.com/@cameronbray/website-homepage-test.js?v=3";
+      const inspect = Inspector.into("#observablehq-d98fa37d");
+      (new Runtime).module(define, name => (name === "chart") && inspect());
+      </script>
   </body>
 </html>

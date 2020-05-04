@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 @font-face {
   font-family: 'AO Mono';
@@ -100,4 +101,10 @@ a {
 
 .embeddedObservable {
   width: 100%;
+}
+
+.basic-wrapper {
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
 }
