@@ -10,6 +10,7 @@
 # Adding to Observabel
 
 1. Update JSON
+    (external links need https://, new tabs need loc:"_blank")
 2. Publish
 3. Click the three dots next to code, and copy 'embed' code
 4. Paste from <script> to </script>

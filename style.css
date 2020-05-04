@@ -22,17 +22,32 @@
   font-style: normal;
 }
 
-body {
+@font-face {
+  font-family: 'Inter Regular';
+  src: url('/Inter-Regular.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+header {
   font-family: 'AO Mono', sans-serif;
   margin: 0px;
 }
 
+body {
+  font-family: 'Inter Regular', sans-serif;
+  margin: 0px;
+}
+
 h1 {
+  font-family: 'AO Mono', sans-serif;
   font-weight: 900;
 }
 
+
 p {
-  font-weight: 300;
+  font-family: 'Inter Regular', sans-serif;
+  font-weight: 1200;
 }
 
 #siteWrapper {
@@ -50,6 +65,12 @@ p {
   margin: 50px;
 }
 
+#nowrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px;
+}
 .imageStyle {
   display: flex;
   margin: 20px;
@@ -102,6 +123,7 @@ a {
 
 .embeddedObservable {
   width: 100%;
+  margin: auto 0;
 }
 
 .basic-wrapper {
@@ -127,4 +149,9 @@ a {
   font-size: 20px;
   color: rgb(170, 20, 12);
   text-align: center;
+}
+
+.audio-icon {
+  display: none;
+
 }
