@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'Inter Regular';
-  src: url('/Inter-Regular.otf') format('opentype');
+  src: url('/Inter-SemiBold.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
 }
@@ -43,6 +43,7 @@ h1 {
   font-family: 'AO Mono', sans-serif;
   font-weight: 900;
   color: #ED1B58;
+  font-size:120px;
 }
 
 h2 {
@@ -76,6 +77,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 70px;
+  class: "center"
 }
 .imageStyle {
   display: flex;
@@ -158,6 +160,7 @@ a {
   flex-direction: column;
   background-color: #ED1B58;
   color: white;
+  font-size:70px;
 }
 
 .nav-item-inverse {
