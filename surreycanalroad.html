@@ -15,6 +15,10 @@
   <body>
     <!-- All html files have a head ^^ above, and a body. Here! -->
 
+    <div id="loading">
+      <img id="loading-image" src="img/loading2.gif" alt="Loading..." />
+    </div>
+
     <div id="navbar">
       <!-- This is something we made, a navbar.... -->
       <a href="index.html">
@@ -22,10 +26,11 @@
       </a>
     </div>
 
-
     <div class="bodyWithHeader">
       <h1>SURREY CANAL ROAD</h1>
     </div>
+
+    <div class="loader"></div>
 
     <div class="bodyTIGHT">
         <img src="img/SCR-text.png" alt="SurreyCanalRoad" style="width:743px;height:1010px;">
@@ -99,6 +104,12 @@
       <div class="nowrapper">
         <img src="img/surrey canal road photos/history.gif" alt="history is made by those who write the best stories" style="width:100%">
       </div>  
+
+      <script>
+        $(window).load(function() {
+          $('#loading').hide();
+        });
+      </script>
 
   </body>
 
