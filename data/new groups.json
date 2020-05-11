@@ -26,7 +26,7 @@
     {"id": "industrial elderflower", "group": 2, "url":"elderflower.html", "loc":""},
     {"id": "compost tea machine", "group": 2, "url":"https://sara-lohse.com/compost-powered-tea-maker", "loc":"_blank"},
     {"id": "home biodigester", "group": 2, "url":"AD.html", "loc":""},
-    {"id": "videos", "group": 2, "url":"videos.html", "loc":"_blank"},
+    {"id": "videos", "group": 2, "url":"videos.html", "loc":""},
     {"id": "my spotify", "group": 2, "url":"https://open.spotify.com/user/1158210219?si=iPNYF9AFTz6_eijOWpsB9w", "loc":"_blank"},
     {"id": "my soundcloud", "group": 2, "url":"https://soundcloud.com/cameron-bray", "loc":"_blank"}
 

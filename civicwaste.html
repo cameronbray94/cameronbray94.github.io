@@ -25,16 +25,25 @@
 
     <div class="bodyWithHeader"; class="center">
       <h1>WHAT DOES A CIVIC WASTE FACILITY LOOK LIKE?</h1>
-      
     </div>
 
     <div class="nowrapper">
         <img src="img/selchp nice pic.jpeg" alt="about" style="width:100%">
       </div> 
+
+      <div class="bodyTIGHT">
+        <img src="img/civic waste intro text.png" alt="civicwasteintro" style="width:844px;height:3172px;">
+      </div> 
       
-      <div class="bodyWithHeader">
-        <h1>SOME STUFF ABOUT A CIVIC WASTE FACILITY</h1>
-      </div>
+      <div id="nowrapper">
+        <!-- <div class="embeddedObservable" id="observablehq-741ad44a"></div> -->
+        <div class="embeddedObservable" id="observablehq-7bb0441a"></div>
+        <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@cameronbray/civic-waste-facility-mapping.js?v=3";
+        const inspect = Inspector.into("#observablehq-7bb0441a");
+        (new Runtime).module(define, name => (name === "chart") && inspect());
+        </script>
     
   </body>
 
