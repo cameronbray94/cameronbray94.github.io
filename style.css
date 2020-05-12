@@ -135,7 +135,6 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  text-align: justify;
   margin-top: 70px;
   min-height: 100%;
   align-items: center;
@@ -146,6 +145,7 @@ p {
   width: 40%;
   display: flex;
   justify-content: center;
+  text-align: justify;
   margin: 300px;
   margin-top: 40px;
   min-height: 100%;
