@@ -176,7 +176,19 @@ a {
   align-items: center;
   flex-direction: column;
   background-color: #ED1B58;
-  color: white;
+  color: #c6d92c;
+  font-size:70px;
+}
+
+.bodyWithHeaderSillyyellow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-color: fff200;
+  color: #ED1B58;
   font-size:70px;
 }
 
@@ -185,6 +197,14 @@ a {
   text-decoration: none;
   font-size: 20px;
   color: rgb(170, 20, 12);
+  text-align: center;
+}
+
+.nav-item-inverse-alt {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #c6d92c;
   text-align: center;
 }
 
