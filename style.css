@@ -94,11 +94,33 @@ p2 {
   margin: 50px;
 }
 
+
 #nowrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 70px;
+}
+
+#nowrapper100width {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 70px;
+  width:100%;
+  position:center;
+}
+
+
+#Library {
+  height: 841px;
+  width: 594px;
+}
+
+#Library:hover {
+  content: url('img/civic waste/front page hover.png');
+  width: 841px;
+  height: 594px;
 }
 
 #loading {
@@ -265,7 +287,7 @@ p {
   flex-wrap: wrap;
   width: 900px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 
