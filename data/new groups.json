@@ -27,6 +27,7 @@
     {"id": "industrial elderflower", "group": 2, "url":"elderflower.html", "loc":""},
     {"id": "compost tea machine", "group": 3, "url":"https://sara-lohse.com/compost-powered-tea-maker", "loc":"_blank"},
     {"id": "home biodigester", "group": 2, "url":"home biodigester.html", "loc":""},
+    {"id": "compost hot tub", "group": 2, "url":"hottub.html", "loc":""},
     {"id": "videos", "group": 2, "url":"videos.html", "loc":""},
     {"id": "my spotify", "group": 3, "url":"https://open.spotify.com/user/1158210219?si=iPNYF9AFTz6_eijOWpsB9w", "loc":"_blank"},
     {"id": "my soundcloud", "group": 3, "url":"https://soundcloud.com/cameron-bray", "loc":"_blank"}
@@ -52,6 +53,7 @@
     {"source": "ARCHITECTURE", "target": "OfCA", "value": 1},
     {"source": "ART", "target": "car door sound system", "value": 4},
     {"source": "ART", "target": "compost tea machine", "value": 4}, 
+    {"source": "ART", "target": "compost hot tub", "value": 4}, 
     {"source": "ART", "target": "home biodigester", "value": 4}, 
     {"source": "ART", "target": "industrial elderflower", "value": 4},     
     {"source": "ART", "target": "videos", "value": 4}, 
@@ -81,8 +83,11 @@
     {"source": "CIVIC WASTE FACILITY", "target": "behind the scenes", "value": 0.5},     
     {"source": "car door sound system", "target": "Excelsior Works", "value": 0.5}, 
     {"source": "compost tea machine", "target": "home biodigester", "value": 10}, 
-    {"source": "compost tea machine", "target": "CIVIC WASTE FACILITY", "value": 0.5}, 
-    {"source": "home biodigester", "target": "CIVIC WASTE FACILITY", "value": 0.5}
+    {"source": "compost tea machine", "target": "compost hot tub", "value": 10}, 
+    {"source": "compost hot tub", "target": "home biodigester", "value": 10}, 
+    {"source": "compost hot tub", "target": "CIVIC WASTE FACILITY", "value": 8}, 
+    {"source": "compost tea machine", "target": "CIVIC WASTE FACILITY", "value": 8}, 
+    {"source": "home biodigester", "target": "CIVIC WASTE FACILITY", "value": 8}
 
   ]
 }
