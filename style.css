@@ -73,6 +73,7 @@ p {
   color: #0023ff;
   text-align: center;
 }
+
 p2 {
   font-family: 'Inter SemiBold', sans-serif;
   font-weight: 1500;
@@ -272,6 +273,10 @@ a {
   margin: 10px 20px;
 }
 
+.container2 {
+  position: relative;
+}
+
 .bodycontainer {
   display: flex;
   justify-content: space-evenly;
@@ -293,6 +298,16 @@ a {
 
 .audio-icon {
   display: none;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: none;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media screen and (max-width: 900px) {
