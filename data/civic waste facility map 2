@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {"id": "SURREY CANAL ROAD", "group": 1},
+    {"id": "sights and sounds", "group": 2, "url":"surreycanalroad.html", "loc":""},
+    {"id": "redevelopment", "group": 2, "url":"renewal.html", "loc":""},
+    {"id": "excelsior works", "group": 2, "url":"excelsior.html", "loc":""},
+    {"id": "SIL and waste industry", "group": 2, "url":"waste industry.html", "loc":""},
+    {"id": "SELCHP", "group": 1},
+    {"id": "incineration and power generation", "group": 2, "url":"SELCHP.html", "loc":""},
+    {"id": "TECHNOLOGIES FOR A REGENERATIVE FUTURE", "group": 1},
+    {"id": "anaerobic digestion", "group": 2, "url":"anaerobic digestion.html", "loc":""},
+    {"id": "compost heating", "group": 2, "url":"compost heating.html", "loc":""},
+    {"id": "district heating", "group": 2, "url":"district heating.html", "loc":""},
+    {"id": "materials recovery facility", "group": 2, "url":"district heating.html", "loc":""},
+    {"id": "MAKE IT POROUS", "group": 1},
+    {"id": "growing", "group": 2, "url":"growing.html", "loc":""},
+    {"id": "bathing", "group": 2, "url":"bathing.html", "loc":""},
+    {"id": "education", "group": 2, "url":"bathing.html", "loc":""},
+    {"id": "BEHOLD THE CIVIC WASTE FACILITY", "group": 1, "url":"civicwastefacility.html", "loc":""},
+    {"id": "home anaerobic digester", "group": 2, "url":"AD.html", "loc":""},
+    {"id": "compost tea machine", "group": 2, "url":"https://sara-lohse.com/compost-powered-tea-maker", "loc":"_blank"},
+    {"id": "car door sound system", "group": 2, "url":"cardoor.html", "loc":""},
+    {"id": "ode to SELCHP", "group": 2, "url":"videos.html", "loc":""} 
+ ],
+
+  "links": [
+    {"source": "SURREY CANAL ROAD", "target": "SELCHP", "value": 30},
+    {"source": "SELCHP", "target": "TECHNOLOGIES FOR A REGENERATIVE FUTURE", "value": 30},
+    {"source": "TECHNOLOGIES FOR A REGENERATIVE FUTURE", "target": "MAKE IT POROUS", "value": 30},
+    {"source": "MAKE IT POROUS", "target": "BEHOLD THE CIVIC WASTE FACILITY", "value": 30},
+    {"source": "SURREY CANAL ROAD", "target": "sights and sounds", "value": 10},
+    {"source": "SURREY CANAL ROAD", "target": "redevelopment", "value": 10},
+    {"source": "SURREY CANAL ROAD", "target": "excelsior works", "value": 10},
+    {"source": "SURREY CANAL ROAD", "target": "SIL and waste industry", "value": 10},
+    {"source": "SELCHP", "target": "incineration and power generation", "value": 10},
+    {"source": "TECHNOLOGIES FOR A REGENERATIVE FUTURE", "target": "anaerobic digestion", "value": 10},
+    {"source": "TECHNOLOGIES FOR A REGENERATIVE FUTURE", "target": "compost heating", "value": 10},
+    {"source": "TECHNOLOGIES FOR A REGENERATIVE FUTURE", "target": "district heating", "value": 10},
+    {"source": "TECHNOLOGIES FOR A REGENERATIVE FUTURE", "target": "materials recovery facility", "value": 10},
+    {"source": "MAKE IT POROUS", "target": "growing", "value": 10},
+    {"source": "MAKE IT POROUS", "target": "bathing", "value": 10},
+    {"source": "MAKE IT POROUS", "target": "education", "value": 10},
+    {"source": "home anaerobic digester", "target": "anaerobic digestion", "value": 0.1},
+    {"source": "compost tea machine", "target": "anaerobic digestion", "value": 0.1},
+    {"source": "car door sound system", "target": "sights and sounds", "value": 0.1},
+    {"source": "ode to SELCHP", "target": "SELCHP", "value": 0.1}
+  ]
+}
