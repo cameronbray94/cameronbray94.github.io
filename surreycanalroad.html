@@ -43,6 +43,25 @@
 
     <div class="loader"></div>
 
+    <div class="bodyWithHeader">
+      <img id="example" onclick="changeImage()" src="img/surrey canal road photos/zoomed.png" alt="around surrey canal road" style="width:100%;">
+      <p> <br> The area around Surrey Canal Road and the revelopments looming over it (click me).
+    </p> 
+    </div> 
+
+    <script type="text/javascript">
+      function changeImage() {
+        element=document.getElementById('example')
+
+        if (element.src.match("zoomed_development")) {
+          element.src="img/surrey canal road photos/zoomed.png";
+        } else {
+          element.src="img/surrey canal road photos/zoomed_development.png";
+        }
+      }
+   </script>
+
+
     <div class="bodyTIGHT">
         <img src="img/SCR-text.png" alt="SurreyCanalRoad" style="width:743px;height:1010px;">
       </div>
