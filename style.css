@@ -185,7 +185,7 @@ p2 {
   flex-direction: column;
 }
 
-.bodyWithHeader2 {
+.bodyWithHeader2{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -284,6 +284,7 @@ a {
   align-items: center;
   flex-direction: column;
   margin: 10px 20px;
+  cursor: move;
 }
 
 .container2 {
@@ -343,4 +344,15 @@ a {
 }
 .card:hover .img-top {
   display: inline;
+}
+
+.dragme{
+  position:relative;
+  width: 270px;
+  height: 203px;
+  cursor: move;
+}
+#draggable {
+  background-color: #ccc;
+  border: 1px solid #000;
 }
