@@ -417,6 +417,20 @@ a {
   z-index: 7;
 }
 
+#folder8 {
+  top: 5%;
+  left: 20%;
+  position: absolute;
+  z-index: 8;
+}
+
+#folder9 {
+  top: 59%;
+  left: 7%;
+  position: absolute;
+  z-index: 9;
+}
+
 #folderhottub {
   top: 70%;
   left: 7%;
@@ -448,6 +462,13 @@ a {
 #folderback {
   top: 70%;
   left: 90%;
+  position: absolute;
+  z-index: 4;
+}
+
+#folderref {
+  top: 55%;
+  left: 92%;
   position: absolute;
   z-index: 4;
 }

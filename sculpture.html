@@ -5,69 +5,82 @@
     <!-- this is the core bits that tell the page stuff like favicon and title and link in your styles via css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>art</title>
+    <title>about</title>
     <meta name="author" content="Sam Green">
     <meta name="description" content="Bray Folio">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
     <!-- All html files have a head ^^ above, and a body. Here! -->
 
     <div id="navbar">
-        <!-- This is something we made, a navbar.... -->
         <a href="index.html">
           <h1 class="nav-item-inverse-pink">CAMERON BRAY</h1>
         </a>
       </div>
 
-<div class="bodycontainer">
+<div class="bodywithheadergreen">
 
-    <div class="imageContainer">
+    <div id="folder1" class="imageContainer dragFolder">
         <a href="cardoor.html">
-        <img src="img/folder.png" alt="folder" style="width:200px">
+        <img src="img/folder.png" alt="folder" style="width:150px">
         <p>  car door sound system </p> </a>
     </div>
 
-    <div class="imageContainer">
+    <div id="folder2" class="imageContainer dragFolder">
         <a href="https://sara-lohse.com/compost-powered-tea-maker" target="_blank">
-        <img src="img/folder.png" alt="folder" style="width:200px">
+        <img src="img/folder.png" alt="folder" style="width:150px">
         <p>  compost tea machine </p> </a>
     </div>
 
-    <div class="imageContainer">
+    <div id="folder3" class="imageContainer dragFolder">
         <a href="elderflower.html">
-        <img src="img/folder.png" alt="folder" style="width:200px">
-        <p>  industrial elderflower </p> </a>
-    </div>
+        <img src="img/folder.png" alt="folder" style="width:150px">
+        <p>  industrial elderlower </p> </a>
+    </div> 
 
-    <div class="imageContainer">
-        <a href="home biodigester.html" target="_blank">
-        <img src="img/folder.png" alt="folder" style="width:200px">
+    <div id="folder4" class="imageContainer dragFolder">
+        <a href="home biodigester.html">
+        <img src="img/folder.png" alt="folder" style="width:150px">
         <p>  home biodigester </p> </a>
-    </div>
+    </div> 
 
-    <div class="imageContainer">
+    <div id="folder5" class="imageContainer dragFolder">
         <a href="videos.html">
-        <img src="img/folder.png" alt="folder" style="width:200px">
+        <img src="img/folder.png" alt="folder" style="width:150px">
         <p>  videos </p> </a>
-    </div>
+    </div> 
 
-    <div class="imageContainer">
-      <a href="ref.html">
-      <img src="img/folder.png" alt="folder" style="width:200px">
-      <p>  references folder </p> </a>
-    </div>
+    <div id="folderAD" class="imageContainer dragFolder">
+        <a href="reading.html">
+        <img src="img/folder.png" alt="folder" style="width:150px">
+        <p>  on my bookshelf </p> </a>
+    </div> 
 
-    <div class="imageContainer">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ.html"target="_blank">
-      <img src="img/folder.png" alt="folder" style="width:200px">
-      <p>  200512 draft</p> </a>
-    </div>
+    <div id="folder7" class="imageContainer dragFolder">
+        <a href="junk.html">
+        <img src="img/trash.png" alt="folder" style="width:150px">
+        <p> junk </p> </a>
+    </div> 
 
 </div>
+
+<script>
+          // Wait for window load
+    $(window).on('load', function(){
+        // Animate loader off screen
+        $(".dragFolder").draggable(
+            { cursor: "crosshair" }
+        );
+      });
     
-  </body>
+</script>
+
+
+</body>
 
 </html>
