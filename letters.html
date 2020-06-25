@@ -1,0 +1,73 @@
+<html>
+<!-- html tags go on the outside -->
+
+  <head>
+    <!-- this is the core bits that tell the page stuff like favicon and title and link in your styles via css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>elderflower</title>
+    <meta name="author" content="Sam Green">
+    <meta name="description" content="Bray Folio">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <!-- All html files have a head ^^ above, and a body. Here! -->
+
+    <div id="navbar">
+      <!-- This is something we made, a navbar.... -->
+      <a href="index.html">
+        <h1 class="nav-item">CAMERON BRAY</h1>
+      </a>
+    </div>
+
+ <div class="bodywithheader">
+
+    <div id="letterintro" class="imageContainer dragFolder">
+        <img src="img/civic waste/LETTERS/intro-text.png" alt="letter" style="width:550px">
+    </div>
+
+    <div id="letter1" class="imageContainer dragFolder">
+        <img src="img/civic waste/LETTERS/first.png" alt="letter" style="width:550px">
+    </div>
+
+    <div id="letter2" class="imageContainer dragFolder">
+        <img src="img/civic waste/LETTERS/second.png" alt="letter" style="width:550px">
+    </div>
+
+
+    <div id="letter3" class="imageContainer dragFolder">
+        <img src="img/civic waste/LETTERS/third.png" alt="letter" style="width:550px">
+    </div>
+
+
+    <div id="letter4" class="imageContainer dragFolder">
+        <img src="img/civic waste/LETTERS/fourth.png" alt="letter" style="width:550px">
+    </div>
+
+
+    <div id="folderback" class="imageContainer dragFolder">
+        <a href="civicwasteintro.html">
+        <img src="img/folder.png" alt="folder" style="width:90px">
+        <p> go back  </p> </a>
+    </div>
+
+</div>
+
+
+            <script>
+                // Wait for window load
+            $(window).on('load', function(){
+            // Animate loader off screen
+            $(".dragFolder").draggable(
+                { cursor: "crosshair" }
+            );
+            });
+            </script>
+
+  </body>
+
+</html>

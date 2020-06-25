@@ -10,6 +10,8 @@
     <meta name="description" content="Bray Folio">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -27,16 +29,29 @@
       <h1>MATERIAL RECOVERY</h1>
     </div>
 
+    <div class="bodywithheader">
+
+          <div id="letterintro" class="imageContainer dragFolder">
+            <img src="img/civic waste/MRFS/lorry-wave.gif" alt="letter" style="width:600px">
+          </div>
+
+          <div id="shredder" class="imageContainer dragFolder">
+              <img src="img/civic waste/MRFS/plastic-shredder-2.png" alt="letter" style="width:600px">
+          </div>
+    </div>
+
+
+
     <div class="nowrapper">
-      <img src="img/civic waste/waste targets.svg" alt="DH" style="width:100%" style="position:center">
+      <img src="img/civic waste/mrfs/waste targets.svg" alt="DH" style="width:100%" style="position:center">
     </div>
 
     <div class="bodyTIGHT">
-        <img src="img/civic waste/mrfs text.png" alt="DH" style="width:844px;height:1146;">
+        <img src="img/civic waste/mrfs/mrfs text.png" alt="DH" style="width:844px;height:1146;">
     </div>
 
     <div class="imageContainer">
-        <img src="img/civic waste/plastic shredder.png" alt="compost" style="width:60%">
+        <img src="img/civic waste/mrfs/plastic shredder.png" alt="compost" style="width:60%">
     </div> 
       
 
@@ -45,8 +60,17 @@
      </div>
 
 
+        <script>
+            // Wait for window load
+        $(window).on('load', function(){
+        // Animate loader off screen
+        $(".dragFolder").draggable(
+            { cursor: "crosshair" }
+        );
+        });
+        </script>
 
 
-  </body>
+ </body>
 
 </html>

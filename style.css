@@ -453,8 +453,8 @@ a {
 }
 
 #folderbehindthescenes {
-  top: 3%;
-  left: 88%;
+  top: 80%;
+  left: 80%;
   position: absolute;
   z-index: 4;
 }
@@ -462,6 +462,13 @@ a {
 #folderback {
   top: 70%;
   left: 90%;
+  position: absolute;
+  z-index: 4;
+}
+
+#foldernetworks {
+  top: 3%;
+  left: 88%;
   position: absolute;
   z-index: 4;
 }
@@ -504,6 +511,48 @@ a {
 #writing {
   top: 8%;
   left: 40%;
+  position: absolute;
+  z-index: 10;
+}
+
+#letterintro {
+  top: 8%;
+  left: 9%;
+  position: absolute;
+  z-index: 20;
+}
+
+#letter1 {
+  top: 12%;
+  left: 30%;
+  position: absolute;
+  z-index: 12;
+}
+
+#letter2 {
+  top: 7%;
+  left: 60%;
+  position: absolute;
+  z-index: 13;
+}
+
+#letter3 {
+  top: 3%;
+  left: 42%;
+  position: absolute;
+  z-index: 14;
+}
+
+#letter4 {
+  top: 12%;
+  left: 50%;
+  position: absolute;
+  z-index: 15;
+}
+
+#shredder {
+  top: 52%;
+  left: 55%;
   position: absolute;
   z-index: 10;
 }
