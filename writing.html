@@ -32,42 +32,108 @@
 
     <div class="bodywithheader">
 
-            <div id="letterintro" class="imageContainer dragFolder">
-              <img src="img/civic waste/reading : writing/intro-text.png" alt="letter" style="width:550px">
+      <div id="letterintro" class="desktopWindowBorder inbetweenWindow dragFolder">
+        <div class="desktopWindowHeader">
+            <div class="desktopWindowButtons">
+              <div class="redDot"></div>
+              <div class="yellowDot"></div>
+              <div class="greenDot"></div>
             </div>
+            <div class="desktopWindowTitle">power / power</div>
+        </div>
+        <div class="desktopWindowBody">
+            <img src="img/civic waste/reading : writing/intro-text2.png" alt="power" style="width:500px">
+        </div>
+      </div>
 
-            <div id="letter1" class="imageContainer dragFolder">
-                <img src="img/civic waste/reading : writing/protest.png" alt="letter" style="width:550px">
+      <div id="letter1" class="desktopWindowBorder inbetweenWindow dragFolder">
+        <div class="desktopWindowHeader">
+            <div class="desktopWindowButtons">
+              <div class="redDot"></div>
+              <div class="yellowDot"></div>
+              <div class="greenDot"></div>
             </div>
-     </div>
+            <div class="desktopWindowTitle">protest-signs.jpg</div>
+        </div>
+        <div class="desktopWindowBody">
+            <img src="img/civic waste/reading : writing/protest signs.JPG" alt="power" style="width:500px">
+        </div>
+      </div>
 
-        
-      <div class="bodyTIGHT dragFolder">
-            <img src="img/civic waste/reading : writing/civic waste intro text copy.png" alt="civicwasteintro" style="width:844px;height:2002;" usemap="#image-map2">
+      <div id="textoffpage" class="desktopWindowBorder mediumWindow dragFolder">
+        <div class="desktopWindowHeader">
+            <div class="desktopWindowButtons">
+              <div class="redDot"></div>
+              <div class="yellowDot"></div>
+              <div class="greenDot"></div>
+            </div>
+            <div class="desktopWindowTitle">waste</div>
+        </div>
+        <div class="desktopWindowBody">
+            <img src="img/civic waste/reading : writing/civic-waste-text.png" alt="power" style="width:600px" usemap="#image-map2">
             <map name="image-map2">
-                <area target="_blank" alt="CDR" title="CDR" href="data/CDR.pdf" coords="70,1853,757,1913" shape="rect">
+              <area target="_blank" alt="CDR" title="CDR" href="data/CDR.pdf" coords="23,1287,571,1305" shape="rect">
             </map>
-      </div>
-        
-
-      <div class="bodyWithHeader"; class="center">
-        <h1>WE HAVE THE RIGHT TO THE POTENTIAL EMBEDDED IN WHAT WE THROW AWAY</h1>
+        </div>
       </div>
 
-      <div class="bodyWithHeader"; class="center">
-      <p>back to <a href="civicwasteintro.html">Civic Waste Facility</a></p>
+      <div id="righttopotential" class="desktopWindowBorder inbetweenWindow dragFolder">
+        <div class="desktopWindowHeader">
+            <div class="desktopWindowButtons">
+              <div class="redDot"></div>
+              <div class="yellowDot"></div>
+              <a href="selchp.html"><div class="greenDot"></div></a>
+            </div>
+            <div class="desktopWindowTitle">to summarise</div>
+        </div>
+        <div class="desktopWindowBody">
+          <div class="myText">
+            <h3>WE HAVE THE RIGHT TO THE POTENTIAL EMBEDDED IN WHAT WE THROW AWAY</h3>
+          </div>
+        </div>
       </div>
 
+      <div id="folderbackoffscreen" class="imageContainer dragFolder">
+        <a href="civicwasteintro.html">
+        <img src="img/folder.png" alt="folder" style="width:90px">
+        <p> go back  </p> </a>
+    </div>
+      
+  </div>
 
-          <script>
-              // Wait for window load
-          $(window).on('load', function(){
-          // Animate loader off screen
-          $(".dragFolder").draggable(
-              { cursor: "crosshair" }
-          );
-          });
-          </script>
+
+
+      <script>
+        // Wait for window load
+      $(window).on('load', function(){
+      // Animate loader off screen
+      $(".dragFolder").draggable(
+          { cursor: "crosshair" }
+      );
+      // on clicking, brings the clicked item to the front
+      $('.dragFolder').click( function(){
+        $(this).css('z-index', 100);
+        $(this).siblings('.dragFolder').css('z-index', 1);
+      });
+      // red dot close
+      $('.redDot').click( function(){
+        $(this).parents('.dragFolder').fadeOut();
+      });
+      $('.refresh').click( function(){
+        $('.dragFolder').show();
+      });
+      // yellow dot minimise / maximise
+      $('.yellowDot').click( function(){
+        if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+          $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+          $(this).parents('.dragFolder').css('height', 'auto')
+        } else {
+          $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+          $(this).parents('.dragFolder').css('height', '24px')
+      }
+      });
+      });
+      </script>
 
 
 

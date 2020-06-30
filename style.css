@@ -66,6 +66,13 @@ h2 {
   font-weight: 1000;
 }
 
+h3 {
+  font-family: 'AO Mono', sans-serif;
+  font-weight: 900;
+  color: #ED1B58;
+  font-size:80px;
+}
+
 
 p {
   font-family: 'Inter SemiBold', sans-serif;
@@ -164,6 +171,7 @@ p2 {
   height: 70px;
   align-items: center;
   justify-content: start;
+  flex-direction: row;
 }
 
 .nav-item {
@@ -360,7 +368,6 @@ a {
   position:relative;
   width: 270px;
   height: 203px;
-  cursor: move;
 }
 #draggable {
   background-color: #ccc;
@@ -463,8 +470,16 @@ a {
   top: 70%;
   left: 90%;
   position: absolute;
-  z-index: 4;
+  z-index: 1;
 }
+
+#folderbackoffscreen {
+  top: 300%;
+  left: 90%;
+  position: absolute;
+  z-index: 1;
+}
+
 
 #foldernetworks {
   top: 3%;
@@ -482,14 +497,21 @@ a {
 
 #folderwriting {
   top: 6%;
-  left: 70%;
+  left: 74%;
+  position: absolute;
+  z-index: 5;
+}
+
+#literature {
+  top: 6%;
+  left: 79%;
   position: absolute;
   z-index: 5;
 }
 
 #proposal {
-  top: 20%;
-  left: 23%;
+  top: 30%;
+  left: 17%;
   position: absolute;
   z-index: 20;
 }
@@ -519,7 +541,7 @@ a {
   top: 8%;
   left: 9%;
   position: absolute;
-  z-index: 20;
+  z-index: 100;
 }
 
 #letter1 {
@@ -550,9 +572,125 @@ a {
   z-index: 15;
 }
 
+#assembly {
+  top: 60%;
+  left: 40%;
+  position: absolute;
+  z-index: 20;
+}
+
+
+#textoffpage {
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  z-index: 15;
+}
+
+#righttopotential {
+  top: 190%;
+  left: 10%;
+  position: absolute;
+  z-index: 20;
+}
+
 #shredder {
   top: 52%;
   left: 55%;
   position: absolute;
   z-index: 10;
+}
+
+#bubbles {
+  top: 42%;
+  left: 28%;
+  position: absolute;
+  z-index: 20;
+}
+
+
+.desktopWindowBorder {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px solid #4a4a4a;
+}
+
+.desktopWindowHeader {
+  display: flex;
+  flex-direction: row;
+  background-color: #4a4a4a;
+  color: #bdbdbd;
+}
+
+.desktopWindowButtons {
+  display: flex;
+  flex-direction: row;
+  width: 58px;
+  padding: 0 5px;
+  justify-content: space-around;
+  align-items: center;
+  height: 22px;
+  padding-bottom: 2px;
+}
+
+.desktopWindowTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 30px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.desktopWindowBody {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.mediumWindow {
+  width: 600px;
+}
+
+.inbetweenWindow {
+  width: 500px;
+}
+
+.smallWindow {
+  width: 300px;
+}
+
+.verysmallWindow {
+  width: 200px;
+}
+
+.redDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #ff5752;
+}
+
+.yellowDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #e3c224;
+}
+
+.greenDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #63bd25;
+}
+
+.myText {
+  padding: 10px;
+  text-align: left;
+}
+
+.myText > p {
+  text-align: left;
 }

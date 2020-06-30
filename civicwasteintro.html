@@ -84,22 +84,64 @@
       <div id="folderwriting" class="imageContainer dragFolder">
         <a href="writing.html">
         <img src="img/folder.png" alt="folder" style="width:90px">
-        <p>  reading, writing, thinking </p> </a>
+        <p>  reading, writing </p> </a>
       </div>
 
-      <div id="proposal" class="imageContainer dragFolder">
+      <!-- <div id="proposal" class="imageContainer dragFolder">
         <a href="imagemap.html">
         <img src="img/civic waste/folders homepage/proposal2.png" alt="proposal" style="width:600px">
-      </div>
+      </div> -->
 
-      <div id="scr" class="imageContainer dragFolder">
+      <!-- <div id="scr" class="imageContainer dragFolder">
         <a href="surreycanalroad.html">
-        <img src="img/civic waste/folders homepage/surreycanalroad2.png" alt="surreycanalroad" style="width:400px">
+        <img src="img/civic waste/folders homepage/surreycanalroad2.png" alt="surreycanalroad" style="width:400px"></a>
+      </div> -->
+
+      <!-- <div id="selchp" class="imageContainer dragFolder">
+        <a href="selchp.html">
+        <img src="img/civic waste/folders homepage/selchp2.png" alt="selchp" style="width:550px"></a>
+      </div> -->
+
+      <div id="selchp" class="desktopWindowBorder mediumWindow dragFolder">
+        <div class="desktopWindowHeader">
+            <div class="desktopWindowButtons">
+              <div class="redDot"></div>
+              <div class="yellowDot"></div>
+              <a href="selchp.html"><div class="greenDot"></div></a>
+            </div>
+            <div class="desktopWindowTitle">SELCHP</div>
+        </div>
+        <div class="desktopWindowBody">
+          <a href="selchp.html"><img src="img/civic waste/SELCHP-section-animation.gif" alt="proposal" style="width:600px"></a>
+        </div>
       </div>
 
-      <div id="selchp" class="imageContainer dragFolder">
-        <a href="selchp.html">
-        <img src="img/civic waste/folders homepage/selchp2.png" alt="selchp" style="width:550px">
+      <div id="proposal" class="desktopWindowBorder mediumWindow dragFolder">
+        <div class="desktopWindowHeader">
+            <div class="desktopWindowButtons">
+              <div class="redDot"></div>
+              <div class="yellowDot"></div>
+              <a href="selchp.html"><div class="greenDot"></div></a>
+            </div>
+            <div class="desktopWindowTitle">Proposals for a civic waste facility</div>
+        </div>
+        <div class="desktopWindowBody">
+          <a href="imagemap.html"> <img src="img/civic waste/folders homepage/proposalNoBorder.png" alt="proposal" style="width:600px"></a>
+        </div>
+      </div>
+
+      <div id="scr" class="desktopWindowBorder mediumWindow dragFolder">
+        <div class="desktopWindowHeader">
+            <div class="desktopWindowButtons">
+              <div class="redDot"></div>
+              <div class="yellowDot"></div>
+              <a href="surreycanalroad.html"><div class="greenDot"></div></a>
+            </div>
+            <div class="desktopWindowTitle">Surrey Canal Road         </div>
+        </div>
+        <div class="desktopWindowBody">
+          <a href="surreycanalroad.html"> <img src="img/civic waste/folders homepage/lorry-lights.gif" alt="surrey canal road" style="width:600px"></a>
+        </div>
       </div>
 
     <script>
@@ -109,6 +151,28 @@
         $(".dragFolder").draggable(
             { cursor: "crosshair" }
         );
+        // on clicking, brings the clicked item to the front
+        $('.dragFolder').click( function(){
+  			  $(this).css('z-index', 100);
+  			  $(this).siblings('.dragFolder').css('z-index', 1);
+  		  });
+        // red dot close
+        $('.redDot').click( function(){
+          $(this).parents('.dragFolder').fadeOut();
+  		  });
+        $('.refresh').click( function(){
+          $('.dragFolder').show();
+  		  });
+        // yellow dot minimise / maximise
+        $('.yellowDot').click( function(){
+          if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+				    $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+            $(this).parents('.dragFolder').css('height', 'auto')
+			    } else {
+  			  	$(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+            $(this).parents('.dragFolder').css('height', '24px')
+  			}
+  		  });
       });
 
     </script>

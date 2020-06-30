@@ -26,28 +26,76 @@
 
  <div class="bodywithheader">
 
-    <div id="letterintro" class="imageContainer dragFolder">
-        <img src="img/civic waste/letters/intro-text.png" alt="letter" style="width:550px">
+
+  <div id="letterintro" class="desktopWindowBorder inbetweenWindow dragFolder">
+    <div class="desktopWindowHeader">
+        <div class="desktopWindowButtons">
+          <div class="redDot"></div>
+          <div class="yellowDot"></div>
+          <a href="selchp.html"><div class="greenDot"></div></a>
+        </div>
+        <div class="desktopWindowTitle">practitioner in residence</div>
     </div>
-
-    <div id="letter1" class="imageContainer dragFolder">
-        <img src="img/civic waste/letters/first.png" alt="letter" style="width:550px">
+    <div class="desktopWindowBody">
+        <img src="img/civic waste/letters/intro.png" alt="intro" style="width:500px">
     </div>
+  </div>
 
-    <div id="letter2" class="imageContainer dragFolder">
-        <img src="img/civic waste/letters/second.png" alt="letter" style="width:550px">
+  <div id="letter1" class="desktopWindowBorder inbetweenWindow dragFolder">
+    <div class="desktopWindowHeader">
+        <div class="desktopWindowButtons">
+          <div class="redDot"></div>
+          <div class="yellowDot"></div>
+          <div class="greenDot"></div>
+        </div>
+        <div class="desktopWindowTitle">to veolia</div>
     </div>
-
-
-    <div id="letter3" class="imageContainer dragFolder">
-        <img src="img/civic waste/letters/third.png" alt="letter" style="width:550px">
+    <div class="desktopWindowBody">
+        <img src="img/civic waste/letters/1.jpg" alt="letter" style="width:500px">
     </div>
+  </div>
 
-
-    <div id="letter4" class="imageContainer dragFolder">
-        <img src="img/civic waste/letters/fourth.png" alt="letter" style="width:550px">
+  <div id="letter2" class="desktopWindowBorder inbetweenWindow dragFolder">
+    <div class="desktopWindowHeader">
+        <div class="desktopWindowButtons">
+          <div class="redDot"></div>
+          <div class="yellowDot"></div>
+          <div class="greenDot"></div>
+        </div>
+        <div class="desktopWindowTitle">to SELCHP</div>
     </div>
+    <div class="desktopWindowBody">
+        <img src="img/civic waste/letters/2.jpg" alt="letter" style="width:500">
+    </div>
+  </div>
 
+  <div id="letter3" class="desktopWindowBorder inbetweenWindow dragFolder">
+    <div class="desktopWindowHeader">
+        <div class="desktopWindowButtons">
+          <div class="redDot"></div>
+          <div class="yellowDot"></div>
+          <div class="greenDot"></div>
+        </div>
+        <div class="desktopWindowTitle">to SELCHP</div>
+    </div>
+    <div class="desktopWindowBody">
+        <img src="img/civic waste/letters/3.jpg" alt="letter" style="width:500">
+    </div>
+  </div>
+
+  <div id="letter4" class="desktopWindowBorder inbetweenWindow dragFolder">
+    <div class="desktopWindowHeader">
+        <div class="desktopWindowButtons">
+          <div class="redDot"></div>
+          <div class="yellowDot"></div>
+          <div class="greenDot"></div>
+        </div>
+        <div class="desktopWindowTitle">to SELCHP's designer</div>
+    </div>
+    <div class="desktopWindowBody">
+        <img src="img/civic waste/letters/4.jpg" alt="letter" style="width:500px">
+    </div>
+  </div>
 
     <div id="folderback" class="imageContainer dragFolder">
         <a href="civicwasteintro.html">
@@ -58,15 +106,37 @@
 </div>
 
 
-            <script>
-                // Wait for window load
-            $(window).on('load', function(){
-            // Animate loader off screen
-            $(".dragFolder").draggable(
-                { cursor: "crosshair" }
-            );
-            });
-            </script>
+<script>
+  // Wait for window load
+$(window).on('load', function(){
+// Animate loader off screen
+$(".dragFolder").draggable(
+    { cursor: "crosshair" }
+);
+// on clicking, brings the clicked item to the front
+$('.dragFolder').click( function(){
+  $(this).css('z-index', 100);
+  $(this).siblings('.dragFolder').css('z-index', 1);
+});
+// red dot close
+$('.redDot').click( function(){
+  $(this).parents('.dragFolder').fadeOut();
+});
+$('.refresh').click( function(){
+  $('.dragFolder').show();
+});
+// yellow dot minimise / maximise
+$('.yellowDot').click( function(){
+  if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+    $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+    $(this).parents('.dragFolder').css('height', 'auto')
+  } else {
+    $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+    $(this).parents('.dragFolder').css('height', '24px')
+}
+});
+});
+</script>
 
   </body>
 
