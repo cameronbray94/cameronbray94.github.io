@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="data/imageMapResizer.min.js"></script>
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -32,7 +34,7 @@
     <br>
 
     <div class="nowrapper">
-      <img src="img/civic waste/exploded_iso_smaller2.png" alt="exploded isometric" usemap="#image-map" style= "width:100%;" style="position:center">
+      <img src="img/civic waste/3d-selchp-exploded-iso-2bigger.png" alt="exploded isometric" usemap="#image-map" style= "width:100%;" style="position:center">
      
     <map name="image-map">
         <area target="_parent" alt="pool" title="pool" href="pool.html" coords="835,9072,2023,9931,1589,10532,401,9664" shape="poly">
@@ -41,8 +43,82 @@
         <area target="_parent" alt="food waste stats" title="food waste stats" href="" coords="739,4485,1282,4724" shape="rect">
     </map>
 
+    <div id="hottubbottom" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">compost heat</div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/hot tub/in construction.jpeg" alt="assembly" style="width:300px">
+      </div>
+    </div>
+
+    <div id="bubblesbottom" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">digestion</div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/home ad/bubbles.gif" alt="assembly" style="width:300px">
+      </div>
+    </div>
+
+    <div id="pool" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">splash</div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/pool gif.gif" alt="splashy" style="width:300px">
+      </div>
+    </div>
+
     <script type="text/javascript">
             imageMapResize();
+    </script>
+
+    <script>
+      // Wait for window load
+    $(window).on('load', function(){
+    // Animate loader off screen
+    $(".dragFolder").draggable(
+        { cursor: "crosshair" }
+    );
+    // on clicking, brings the clicked item to the front
+    $('.dragFolder').click( function(){
+      $(this).css('z-index', 100);
+      $(this).siblings('.dragFolder').css('z-index', 1);
+    });
+    // red dot close
+    $('.redDot').click( function(){
+      $(this).parents('.dragFolder').fadeOut();
+    });
+    $('.refresh').click( function(){
+      $('.dragFolder').show();
+    });
+    // yellow dot minimise / maximise
+    $('.yellowDot').click( function(){
+      if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+        $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+        $(this).parents('.dragFolder').css('height', 'auto')
+      } else {
+        $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+        $(this).parents('.dragFolder').css('height', '24px')
+    }
+    });
+    });
     </script>
 
     </div>

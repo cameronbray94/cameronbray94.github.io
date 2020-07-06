@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="data/imageMapResizer.min.js"></script>
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -32,7 +34,7 @@
     <br>
 
     <div class="nowrapper">
-      <img src="img/civic waste/PERSPECTIVE-2.png" alt="detail section" style= "width:150%;" style="position:center">
+      <img id="makeBigger" src="img/civic waste/PERSPECTIVE-2.png" alt="detail section">
 
     <script type="text/javascript">
             imageMapResize();
@@ -44,6 +46,22 @@
         <p>back to <a href="imagemap.html">Civic Waste Facility</a></p>
        </div>
 
+
+      <script>
+        // Wait for window load
+      $(window).on('load', function(){
+
+      $('#makeBigger').click( function(){
+        myWidth = $(window).width()*1.5+'px'
+        if ( $('#makeBigger').css('width') == myWidth ){
+          $('#makeBigger').css('width', '250%')
+        } else {
+          $('#makeBigger').css('width', '150%')
+      }
+      });
+    });
+
+  </script>
   </body>
 
 </html>

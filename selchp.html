@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="data/imageMapResizer.min.js"></script>
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -27,6 +29,22 @@
     <div class="bodyWithHeader"; class="center">
       <h1>SELCHP</h1>
     </div>
+
+    <div id="assembly" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">assembly</div>
+      </div>
+      <div class="desktopWindowBody">
+        <iframe width="500" height="270" alt="how does it work" src="https://www.youtube.com/embed/-wYV6uJTdic?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
 
     <div class="bodyWithHeader">
       <img src="img/civic waste/selchp nice pic.jpeg" alt="networks of waste" style="width:100%;" style="position:center">
@@ -49,6 +67,39 @@
     <div class="bodyWithHeader"; class="center">
         <p>back to <a href="civicwasteintro.html">Civic Waste Facility</a></p>
        </div>
-  </body>
+
+  <script>
+    // Wait for window load
+  $(window).on('load', function(){
+  // Animate loader off screen
+  $(".dragFolder").draggable(
+      { cursor: "crosshair" }
+  );
+  // on clicking, brings the clicked item to the front
+  $('.dragFolder').click( function(){
+    $(this).css('z-index', 100);
+    $(this).siblings('.dragFolder').css('z-index', 1);
+  });
+  // red dot close
+  $('.redDot').click( function(){
+    $(this).parents('.dragFolder').fadeOut();
+  });
+  $('.refresh').click( function(){
+    $('.dragFolder').show();
+  });
+  // yellow dot minimise / maximise
+  $('.yellowDot').click( function(){
+    if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+      $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+      $(this).parents('.dragFolder').css('height', 'auto')
+    } else {
+      $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+      $(this).parents('.dragFolder').css('height', '24px')
+  }
+  });
+  });
+  </script>
+
+</body>
 
 </html>
