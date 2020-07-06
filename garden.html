@@ -5,11 +5,13 @@
     <!-- this is the core bits that tell the page stuff like favicon and title and link in your styles via css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>GROWING</title>
+    <title>garden</title>
     <meta name="author" content="Sam Green">
     <meta name="description" content="Bray Folio">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -27,15 +29,116 @@
       <h1>GARDEN AND CAFE</h1>
     </div>
 
-    <div class="nowrapper">
-        <img src="img/civic waste/compost heater.png" alt="DH" style="width:100%" style="position:center">
-    </div> 
+    <div id="tip" class="desktopWindowBorder mediumWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">civic waste garden</div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/garden/gardentext.png" alt="garden intro" style="width:600px">
+      </div>
+    </div>
+
+
+    <div id="slice" class="desktopWindowBorder mediumWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle"> the slice of land </div>
+      </div>
+      <div class="desktopWindowBody">
+        <a href="districtheatingstats.html"> <img src="img/civic waste/garden/slice.jpeg" alt="slice" style="width:600px"></a>
+      </div>
+    </div>
+
+    <div id="cafe" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">Platform Cafe</div>
+      </div>
+      <div class="desktopWindowBody">
+        <a href="https://www.instagram.com/platformcafe.lj/" target="blank"> <img src="img/civic waste/garden/LJ cafe.jpeg" alt="cafe" style="width:500px"> </a>
+      </div>
+    </div>
+
+    <div id="farm" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">farm goods</div>
+      </div>
+      <div class="desktopWindowBody">
+        <a href="https://www.instagram.com/loughboroughfarm/" target="blank"> <img src="img/civic waste/garden/ljfarm2.jpg" alt="farm" style="width:300px"> </a>
+      </div>
+    </div>
+
+    <div id="inventory" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle"> quarantine garden inventory</div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/garden/quarantine-garden.png" alt="power" style="width:500px"></a>
+      </div>
+    </div>
       
-    <div class="bodyWithHeader"; class="center">
-      <p>back to <a href="imagemap.html">Civic Waste Facility</a></p>
-     </div>
+
+    <div id="folderback" class="imageContainer dragFolder">
+      <a href="imagemap.html">
+      <img src="img/folder.png" alt="folder" style="width:90px">
+      <p> go back  </p> </a>
+    </div>
 
 
+        <script>
+          // Wait for window load
+        $(window).on('load', function(){
+        // Animate loader off screen
+        $(".dragFolder").draggable(
+            { cursor: "crosshair" }
+        );
+        // on clicking, brings the clicked item to the front
+        $('.dragFolder').click( function(){
+          $(this).css('z-index', 100);
+          $(this).siblings('.dragFolder').css('z-index', 1);
+        });
+        // red dot close
+        $('.redDot').click( function(){
+          $(this).parents('.dragFolder').fadeOut();
+        });
+        $('.refresh').click( function(){
+          $('.dragFolder').show();
+        });
+        // yellow dot minimise / maximise
+        $('.yellowDot').click( function(){
+          if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+            $(this).parents('.dragFolder').css('height', 'auto')
+          } else {
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+            $(this).parents('.dragFolder').css('height', '24px')
+        }
+        });
+        });
+        </script>
 
 
   </body>

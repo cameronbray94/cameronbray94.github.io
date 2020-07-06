@@ -5,11 +5,13 @@
     <!-- this is the core bits that tell the page stuff like favicon and title and link in your styles via css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>elderflower</title>
+    <title>junk</title>
     <meta name="author" content="Sam Green">
     <meta name="description" content="Bray Folio">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -22,12 +24,54 @@
       </a>
     </div>
 
-      
-    <div class="bodyWithHeader">
-        <br>
-        <img src="img/surrey canal road photos/junk.gif" alt="binlorry" style="width:60%">
-        </p> 
+
+    <div id="letterintro" class="desktopWindowBorder largerWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">waste not want not</div>
+      </div>
+      <div class="desktopWindowBody">
+          <img src="img/surrey canal road photos/junk.gif" alt="junk" style="width:1000px">
+      </div>
     </div>
+
+
+        <script>
+          // Wait for window load
+        $(window).on('load', function(){
+        // Animate loader off screen
+        $(".dragFolder").draggable(
+            { cursor: "crosshair" }
+        );
+        // on clicking, brings the clicked item to the front
+        $('.dragFolder').click( function(){
+          $(this).css('z-index', 100);
+          $(this).siblings('.dragFolder').css('z-index', 1);
+        });
+        // red dot close
+        $('.redDot').click( function(){
+          $(this).parents('.dragFolder').fadeOut();
+        });
+        $('.refresh').click( function(){
+          $('.dragFolder').show();
+        });
+        // yellow dot minimise / maximise
+        $('.yellowDot').click( function(){
+          if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+            $(this).parents('.dragFolder').css('height', 'auto')
+          } else {
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+            $(this).parents('.dragFolder').css('height', '24px')
+        }
+        });
+        });
+        </script>
+
 
   </body>
 

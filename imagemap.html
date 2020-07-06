@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="data/imageMapResizer.min.js"></script>
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -37,10 +39,54 @@
 
     </div>
 
+    <div id="materialflow" class="imageContainer dragFolder">
+      <a href="materialflow.html">
+      <img src="img/folder.png" alt="folder" style="width:90px">
+      <p> material flow + colours  </p> </a>
+    </div>
+
+    <div id="folderback2" class="imageContainer dragFolder">
+      <a href="civicwasteintro.html">
+      <img src="img/folder.png" alt="folder" style="width:90px">
+      <p> back  </p> </a>
+    </div>
+
 
     <script type="text/javascript">
         imageMapResize();
     </script>
+
+<script>
+  // Wait for window load
+$(window).on('load', function(){
+// Animate loader off screen
+$(".dragFolder").draggable(
+    { cursor: "crosshair" }
+);
+// on clicking, brings the clicked item to the front
+$('.dragFolder').click( function(){
+  $(this).css('z-index', 100);
+  $(this).siblings('.dragFolder').css('z-index', 1);
+});
+// red dot close
+$('.redDot').click( function(){
+  $(this).parents('.dragFolder').fadeOut();
+});
+$('.refresh').click( function(){
+  $('.dragFolder').show();
+});
+// yellow dot minimise / maximise
+$('.yellowDot').click( function(){
+  if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+    $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+    $(this).parents('.dragFolder').css('height', 'auto')
+  } else {
+    $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+    $(this).parents('.dragFolder').css('height', '24px')
+}
+});
+});
+</script>
 
 <div class="bodyWithHeader"; class="center">
     <p>back to <a href="civicwasteintro.html">Civic Waste Facility</a></p>

@@ -5,11 +5,13 @@
     <!-- this is the core bits that tell the page stuff like favicon and title and link in your styles via css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>INDUSTRY</title>
+    <title>industry</title>
     <meta name="author" content="Sam Green">
     <meta name="description" content="Bray Folio">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -24,18 +26,133 @@
 
 
     <div class="bodyWithHeader"; class="center">
-      <h1>RELOCATING INDUSTRY</h1>
+      <h1>INDUSTRY</h1>
     </div>
 
-    <div class="nowrapper">
-        <img src="img/surrey canal road photos/pano railways.jpeg" alt="DH" style="width:100%" style="position:center">
-    </div> 
+    <div id="tip" class="desktopWindowBorder mediumWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">industry on Surrey Canal Road</div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/industry/industry-intro.png" alt="garden intro" style="width:600px">
+      </div>
+    </div>
+
+
+    <div id="slice" class="desktopWindowBorder mediumWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle"> empty railway arches </div>
+      </div>
+      <div class="desktopWindowBody">
+       <img src="img/civic waste/industry/pano railways.jpeg" alt="slice" style="width:600px">
+      </div>
+    </div>
+
+    <div id="cafe" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">Excelsior Works</div>
+      </div>
+      <div class="desktopWindowBody">
+       <img src="img/civic waste/industry/excelsior-works.png" alt="excelsior" style="width:500px">
+      </div>
+    </div>
+
+    <div id="farm" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">Terence's workshop</div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/industry/Terence workshop marmite.jpg" alt="marmite" style="width:300px">
+      </div>
+    </div>
+
+    <div id="inventory" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle"> Gabriella and Terence from Excelsior Works </div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/industry/Gabriella and Terence.jpg" alt="power" style="width:500px"></a>
+      </div>
+    </div>
+
+    <div id="terence" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle"> Terence at work </div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/industry/Terence workshop 2.jpg" alt="power" style="width:300px"></a>
+      </div>
+    </div>
       
-    <div class="bodyWithHeader"; class="center">
-      <p>back to <a href="imagemap.html">Civic Waste Facility</a></p>
-     </div>
+
+    <div id="folderback" class="imageContainer dragFolder">
+      <a href="imagemap.html">
+      <img src="img/folder.png" alt="folder" style="width:90px">
+      <p> go back  </p> </a>
+    </div>
 
 
+        <script>
+          // Wait for window load
+        $(window).on('load', function(){
+        // Animate loader off screen
+        $(".dragFolder").draggable(
+            { cursor: "crosshair" }
+        );
+        // on clicking, brings the clicked item to the front
+        $('.dragFolder').click( function(){
+          $(this).css('z-index', 100);
+          $(this).siblings('.dragFolder').css('z-index', 1);
+        });
+        // red dot close
+        $('.redDot').click( function(){
+          $(this).parents('.dragFolder').fadeOut();
+        });
+        $('.refresh').click( function(){
+          $('.dragFolder').show();
+        });
+        // yellow dot minimise / maximise
+        $('.yellowDot').click( function(){
+          if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+            $(this).parents('.dragFolder').css('height', 'auto')
+          } else {
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+            $(this).parents('.dragFolder').css('height', '24px')
+        }
+        });
+        });
+        </script>
 
 
   </body>

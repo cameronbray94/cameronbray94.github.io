@@ -10,8 +10,8 @@
     <meta name="description" content="Bray Folio">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 	
     <script>
       // Wait for window load
@@ -42,103 +42,284 @@
       <h1>SURREY CANAL ROAD</h1>
     </div>
 
-    <div class="loader"></div>
 
-    <div class="bodyWithHeader">
-      <img id="example" onclick="changeImage()" src="img/surrey canal road photos/zoomed1.png" alt="around surrey canal road" style="width:100%;">
-      <p> <br> The area around Surrey Canal Road and the revelopments looming over it (click me).
-    </p> 
-    </div> 
-
-    <script type="text/javascript">
-      function changeImage() {
-        element=document.getElementById('example')
-
-        if (element.src.match("zoomed1_development")) {
-          element.src="img/surrey canal road photos/zoomed1.png";
-        } else {
-          element.src="img/surrey canal road photos/zoomed1_development.png";
-        }
-      }
-   </script>
-
-
-    <div class="bodyTIGHT">
-        <img src="img/SCR-text.png" alt="SurreyCanalRoad" style="width:743px;height:1010px;">
+    <div id="scrtext" class="desktopWindowBorder mediumWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle"> Surrey Canal Road </div>
       </div>
+      <div class="desktopWindowBody">
+        <img src="img/surrey canal road photos/surrey-canal-road.png" alt="scr intro" style="width:600px">
+      </div>
+    </div>
+
+    <div id="scr1" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">bin lorries</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/bin-lorry.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr2" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">tunnels</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/cycling-through-tunnels.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr3" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">bike routes</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/q1.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr4" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">lorries at traffic lights</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/lorry-lights.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr5" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">mechanics</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/excelsior-car.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr6" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">hi viz</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/mirror.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr7" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">more hi viz</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/love-lewisham.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr8" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">swarms of football fans</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/millwall-2.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr9" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">late night ravers</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/mot.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr10" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">deliveries from Sierra Leone</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/orion.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr11" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">rubbish tips</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/lewisham-sign.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr12" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">railway bridges</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/train-bridge.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr14" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">and more railway bridges</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/bridges.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr15" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">friendly lorry drivers</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/lorry-wave.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr16" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">plastic bags and cherry trees</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/bag-wind.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
+
+    <div id="scr17" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">from Mika Rottenberg</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/surrey canal road photos/history.gif" alt="hello" style="width:500px">
+      </div>
+    </div>
 
 
-    <div class="nowrapper">
-        <img src="img/surrey canal road photos/bin-lorry.gif" alt="binlorry" style="width:100%">
-      </div> 
+    <div id="folderbackbottom" class="imageContainer dragFolder">
+      <a href="civicwasteintro.html">
+      <img src="img/folder.png" alt="folder" style="width:90px">
+      <p> go back  </p> </a>
+    </div>
 
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/cycling-through-tunnels.gif" alt="tunnel" style="width:100%">
-      </div>    
+     <script>
+      // Wait for window load
+    $(window).on('load', function(){
+    // Animate loader off screen
+    $(".dragFolder").draggable(
+        { cursor: "crosshair" }
+    );
+    // on clicking, brings the clicked item to the front
+    $('.dragFolder').click( function(){
+      $(this).css('z-index', 100);
+      $(this).siblings('.dragFolder').css('z-index', 1);
+    });
+    // red dot close
+    $('.redDot').click( function(){
+      $(this).parents('.dragFolder').fadeOut();
+    });
+    $('.refresh').click( function(){
+      $('.dragFolder').show();
+    });
+    // yellow dot minimise / maximise
+    $('.yellowDot').click( function(){
+      if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+        $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+        $(this).parents('.dragFolder').css('height', 'auto')
+      } else {
+        $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+        $(this).parents('.dragFolder').css('height', '24px')
+    }
+    });
+    });
+    </script>
 
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/q1.gif" alt="q1" style="width:100%">
-      </div>   
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/lorry-lights.gif" alt="lorry at lights" style="width:100%">
-      </div>  
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/excelsior-car.gif" alt="excelsior" style="width:100%">
-      </div>   
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/mirror.gif" alt="mirror" style="width:100%">
-      </div>   
-            
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/love-lewisham.gif" alt="love lewisham" style="width:100%">
-      </div>   
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/millwall-2.gif" alt="millwall" style="width:100%">
-      </div>   
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/mot.gif" alt="MOT" style="width:100%">
-      </div>   
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/orion.gif" alt="orion" style="width:100%">
-      </div>   
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/lewisham-sign.gif" alt="garden" style="width:100%">
-      </div>   
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/train-bridge.gif" alt="train" style="width:100%">
-      </div>  
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/elizabeth.gif" alt="elizabeth" style="width:100%">
-      </div>  
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/bridges.gif" alt="bridges" style="width:100%">
-      </div>  
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/lorry-wave.gif" alt="waving" style="width:100%">
-      </div>  
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/bag-wind.gif" alt="bag in the wind" style="width:100%">
-      </div>  
-
-      <div class="nowrapper">
-        <img src="img/surrey canal road photos/history.gif" alt="history is made by those who write the best stories" style="width:100%">
-      </div>  
-
-    <div class="bodyWithHeader"; class="center">
-      <p>back to <a href="civicwasteintro.html">Civic Waste Facility</a></p>
-     </div>
 
   </body>
 

@@ -475,9 +475,23 @@ a {
   z-index: 1;
 }
 
+#folderback2 {
+  top: 82%;
+  left: 80%;
+  position: absolute;
+  z-index: 1;
+}
+
 #folderbackoffscreen {
   top: 300%;
   left: 90%;
+  position: absolute;
+  z-index: 1;
+}
+
+#folderbackbottom {
+  top: 670%;
+  left: 60%;
   position: absolute;
   z-index: 1;
 }
@@ -639,7 +653,7 @@ a {
 }
 
 #hottubbottom {
-  top: 980%;
+  top: 880%;
   left: 80%;
   position: absolute;
   z-index: 20;
@@ -695,6 +709,235 @@ a {
   z-index: 6;
 }
 
+#tip {
+  top: 12%;
+  left: 2%;
+  position: absolute;
+  z-index: 100;
+}
+
+#corb {
+  top: 49%;
+  left: 24%;
+  position: absolute;
+  z-index: 25;
+}
+
+#hub {
+  top: 4%;
+  left: 48%;
+  position: absolute;
+  z-index: 25;
+}
+
+#swapshop {
+  top: 57%;
+  left: 65%;
+  position: absolute;
+  z-index: 25;
+}
+
+#slice {
+  top: 6%;
+  left: 38%;
+  position: absolute;
+  z-index: 9;
+}
+
+#cafe {
+  top: 46%;
+  left: 28%;
+  position: absolute;
+  z-index: 20;
+}
+
+#farm {
+  top: 10%;
+  left: 77%;
+  position: absolute;
+  z-index: 1;
+}
+
+#inventory {
+  top: 50%;
+  left: 60%;
+  position: absolute;
+  z-index: 6;
+}
+
+
+#terence {
+  top: 40%;
+  left: 2%;
+  position: absolute;
+  z-index: 102;
+}
+
+#gym {
+  top: 74%;
+  left: 2%;
+  position: absolute;
+  z-index: 2;
+}
+
+#signgif {
+  top: 64%;
+  left: 80%;
+  position: absolute;
+  z-index: 102;
+}
+
+#materialflow {
+  top: 5%;
+  left: 45%;
+  position: absolute;
+  z-index: 1;
+}
+
+#scrtext {
+  top: 90%;
+  left: 10%;
+  position: absolute;
+  z-index: 1;
+}
+
+#metalshaker {
+  top: 36%;
+  left: 68%;
+  position: absolute;
+  z-index: 18;
+}
+
+#selchp2 {
+  top: 55%;
+  left: 65%;
+  position: absolute;
+  z-index: 6;
+}
+
+
+#scr1 {
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+#scr2 {
+  top: 140%;
+  left: 54%;
+  position: absolute;
+  z-index: 2;
+}
+
+#scr3 {
+  top: 180%;
+  left: 51%;
+  position: absolute;
+  z-index: 3;
+}
+
+
+#scr4 {
+  top: 220%;
+  left: 24%;
+  position: absolute;
+  z-index: 4;
+}
+
+#scr5 {
+  top: 260%;
+  left: 50%;
+  position: absolute;
+  z-index: 5;
+}
+
+#scr6 {
+  top: 305%;
+  left: 2%;
+  position: absolute;
+  z-index: 6;
+}
+
+#scr6 {
+  top: 300%;
+  left: 53%;
+  position: absolute;
+  z-index: 7;
+}
+
+#scr7 {
+  top: 340%;
+  left: 30%;
+  position: absolute;
+  z-index: 8;
+}
+
+
+#scr8 {
+  top: 380%;
+  left: 10%;
+  position: absolute;
+  z-index: 9;
+}
+
+
+#scr9 {
+  top: 420%;
+  left: 2%;
+  position: absolute;
+  z-index: 10;
+}
+
+#scr10 {
+  top: 424%;
+  left: 51%;
+  position: absolute;
+  z-index: 11;
+}
+
+#scr11 {
+  top: 460%;
+  left: 5%;
+  position: absolute;
+  z-index: 12;
+}
+
+#scr12 {
+  top: 500%;
+  left: 45%;
+  position: absolute;
+  z-index: 13;
+}
+
+#scr14 {
+  top: 540%;
+  left: 20%;
+  position: absolute;
+  z-index: 14;
+}
+
+#scr15 {
+  top: 580%;
+  left: 10%;
+  position: absolute;
+  z-index: 15;
+}
+
+#scr16 {
+  top: 620%;
+  left: 2%;
+  position: absolute;
+  z-index: 16;
+}
+
+#scr17 {
+  top: 610%;
+  left: 51%;
+  position: absolute;
+  z-index: 17;
+}
+
 .desktopWindowBorder {
   display: flex;
   flex-direction: column;
@@ -745,6 +988,14 @@ a {
 
 .largerWindow {
   width: 1000px;
+}
+
+.largestWindow {
+  width: 1200px;
+}
+
+.xtralargestWindow {
+  width: 1400px;
 }
 
 .inbetweenWindow {
