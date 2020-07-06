@@ -657,7 +657,42 @@ a {
   top: 800%;
   left: 2%;
   position: absolute;
-  z-index: 20;
+  z-index: 16;
+}
+
+#hinkcroft1 {
+  top: 50%;
+  left: 68%;
+  position: absolute;
+  z-index: 18;
+}
+
+#hinkcroft2 {
+  top: 70%;
+  left: 2%;
+  position: absolute;
+  z-index:19;
+}
+
+#stool {
+  top: 5%;
+  left: 80%;
+  position: absolute;
+  z-index:19;
+}
+
+#lorrywave {
+  top: 63%;
+  left: 30%;
+  position: absolute;
+  z-index:19;
+}
+
+#localmaterial {
+  top: 70%;
+  left: 65%;
+  position: absolute;
+  z-index: 6;
 }
 
 .desktopWindowBorder {

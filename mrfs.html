@@ -5,7 +5,7 @@
     <!-- this is the core bits that tell the page stuff like favicon and title and link in your styles via css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SORTING WASTE</title>
+    <title>MATERIAL RECOVERY</title>
     <meta name="author" content="Sam Green">
     <meta name="description" content="Bray Folio">
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -29,44 +29,143 @@
       <h1>MATERIAL RECOVERY</h1>
     </div>
 
-    <div class="bodywithheader">
 
-          <div id="letterintro" class="imageContainer dragFolder">
-            <img src="img/civic waste/MRFS/lorry-wave.gif" alt="letter" style="width:600px">
+    <div id="letterintro" class="desktopWindowBorder mediumWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
           </div>
+          <div class="desktopWindowTitle"> what is MRFs? </div>
+      </div>
+      <div class="desktopWindowBody">
+        <img src="img/civic waste/MRFS/mrfs-text2.png" alt="mrfs intro" style="width:600px">
+      </div>
+    </div>
 
-          <div id="shredder" class="imageContainer dragFolder">
-              <img src="img/civic waste/MRFS/plastic-shredder-2.png" alt="letter" style="width:600px">
+    <div id="scr" class="desktopWindowBorder mediumWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
           </div>
+          <div class="desktopWindowTitle">Lewisham and waste targets</div>
+      </div>
+      <div class="desktopWindowBody">
+        <a href="mrfsstats.html"> <img src="img/civic waste/MRFS/waste targets.svg" alt="power" style="width:600px"></a>
+      </div>
+    </div>
+
+    <div id="localmaterial" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">local material cycles</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/civic waste/MRFS/plastic shredder.png" alt="plastic shredder" style="width:300px">
+      </div>
+    </div>
+
+    <div id="stool" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">making stuff with plastic</div>
+      </div>
+      <div class="desktopWindowBody">
+        <a href="https://www.instagram.com/stilllifeworkshop/" target="blank"> <img src="img/civic waste/MRFS/still life 2.jpg" alt="plastic shredder" style="width:300px"></a>
+      </div>
     </div>
 
 
-
-    <div class="nowrapper">
-      <img src="img/civic waste/mrfs/waste targets.svg" alt="DH" style="width:100%" style="position:center">
+    <div id="lorrywave" class="desktopWindowBorder inbetweenWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">Hinkcroft</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/civic waste/MRFS/lorry-wave.gif" alt="hello" style="width:500px">
+      </div>
     </div>
 
-    <div class="bodyTIGHT">
-        <img src="img/civic waste/mrfs/mrfs text.png" alt="DH" style="width:844px;height:1146;">
+    <div id="hinkcroft1" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">inside Hinkcroft</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/civic waste/MRFS/hinkcroft 2.jpg" alt="inside Hinkcroft" style="width:300px">
+      </div>
     </div>
 
-    <div class="imageContainer">
-        <img src="img/civic waste/mrfs/plastic shredder.png" alt="compost" style="width:60%">
-    </div> 
-      
+    <div id="hinkcroft2" class="desktopWindowBorder smallWindow dragFolder">
+      <div class="desktopWindowHeader">
+          <div class="desktopWindowButtons">
+            <div class="redDot"></div>
+            <div class="yellowDot"></div>
+            <div class="greenDot"></div>
+          </div>
+          <div class="desktopWindowTitle">Veolia Southwark</div>
+      </div>
+      <div class="desktopWindowBody">
+      <img src="img/civic waste/MRFS/southwark.jpg" alt="southwark" style="width:300px">
+      </div>
+    </div>
 
-    <div class="bodyWithHeader"; class="center">
-      <p>back to <a href="imagemap.html">Civic Waste Facility</a></p>
-     </div>
+
+    <div id="folderback" class="imageContainer dragFolder">
+      <a href="imagemap.html">
+      <img src="img/folder.png" alt="folder" style="width:90px">
+      <p> go back  </p> </a>
+    </div>
 
 
         <script>
-            // Wait for window load
+          // Wait for window load
         $(window).on('load', function(){
         // Animate loader off screen
         $(".dragFolder").draggable(
             { cursor: "crosshair" }
         );
+        // on clicking, brings the clicked item to the front
+        $('.dragFolder').click( function(){
+          $(this).css('z-index', 100);
+          $(this).siblings('.dragFolder').css('z-index', 1);
+        });
+        // red dot close
+        $('.redDot').click( function(){
+          $(this).parents('.dragFolder').fadeOut();
+        });
+        $('.refresh').click( function(){
+          $('.dragFolder').show();
+        });
+        // yellow dot minimise / maximise
+        $('.yellowDot').click( function(){
+          if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+            $(this).parents('.dragFolder').css('height', 'auto')
+          } else {
+            $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+            $(this).parents('.dragFolder').css('height', '24px')
+        }
+        });
         });
         </script>
 
