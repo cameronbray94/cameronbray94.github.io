@@ -1,0 +1,91 @@
+<html>
+<!-- html tags go on the outside -->
+
+  <head>
+    <!-- this is the core bits that tell the page stuff like favicon and title and link in your styles via css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>zoomzoom</title>
+    <meta name="author" content="Sam Green">
+    <meta name="description" content="Bray Folio">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="data/imageMapResizer.min.js"></script>
+    <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <!-- All html files have a head ^^ above, and a body. Here! -->
+
+    <div id="navbar">
+      <!-- This is something we made, a navbar.... -->
+      <a href="index.html">
+        <h1 class="nav-item">CAMERON BRAY</h1>
+      </a>
+    </div>
+
+    <div class="nowrapper">
+      <img src="img/civic waste/sectionbb.png" alt="detail section" size="250%">
+
+    </div>
+
+        <div id="folderback" class="imageContainer dragFolder">
+        <a href="sectionbb.html">
+        <img src="img/folder.png" alt="folder" style="width:90px">
+        <p> go back  </p> </a>
+        </div>
+
+
+      <script>
+        // Wait for window load
+      $(window).on('load', function(){
+
+      $('#makeBigger').click( function(){
+        myWidth = $(window).width()*1.5+'px'
+        if ( $('#makeBigger').css('width') == myWidth ){
+          $('#makeBigger').css('width', '250%')
+        } else {
+          $('#makeBigger').css('width', '150%')
+      }
+      });
+    });
+
+    </script>
+
+    <script>
+        // Wait for window load
+    $(window).on('load', function(){
+    // Animate loader off screen
+    $(".dragFolder").draggable(
+        { cursor: "crosshair" }
+    );
+    // on clicking, brings the clicked item to the front
+    $('.dragFolder').click( function(){
+        $(this).css('z-index', 100);
+        $(this).siblings('.dragFolder').css('z-index', 1);
+    });
+    // red dot close
+    $('.redDot').click( function(){
+        $(this).parents('.dragFolder').fadeOut();
+    });
+    $('.refresh').click( function(){
+        $('.dragFolder').show();
+    });
+    // yellow dot minimise / maximise
+    $('.yellowDot').click( function(){
+        if ( $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').css('display') == 'none' ){
+        $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').show();
+        $(this).parents('.dragFolder').css('height', 'auto')
+        } else {
+        $(this).parents('.desktopWindowHeader').siblings('.desktopWindowBody').fadeOut();
+        $(this).parents('.dragFolder').css('height', '24px')
+    }
+    });
+    });
+    </script>
+
+
+  </body>
+
+</html>

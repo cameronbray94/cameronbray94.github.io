@@ -808,6 +808,20 @@ a {
   z-index: 18;
 }
 
+#sectionaa {
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  z-index: 20;
+}
+
+#sectionbb {
+  top: 70%;
+  left: 63%;
+  position: absolute;
+  z-index: 18;
+}
+
 #selchp2 {
   top: 55%;
   left: 65%;
