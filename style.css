@@ -829,6 +829,62 @@ a {
   z-index: 6;
 }
 
+#wasteflows {
+  top: 3%;
+  left: 65%;
+  position: absolute;
+  z-index: 6;
+}
+
+#selchptall {
+  top: 3%;
+  left: 55%;
+  position: absolute;
+  z-index: 6;
+}
+
+#foodloop {
+  top: 50%;
+  left: 43%;
+  position: absolute;
+  z-index: 20;
+}
+
+#theory {
+  top: 50%;
+  left: 33%;
+  position: absolute;
+  z-index: 20;
+}
+
+#odetoselchp {
+  top: 55%;
+  left: 3%;
+  position: absolute;
+  z-index: 20;
+}
+
+#composttea {
+  top: 30%;
+  left: 3%;
+  position: absolute;
+  z-index: 20;
+}
+
+#biodigester {
+  top: 21%;
+  left: 60%;
+  position: absolute;
+  z-index: 20;
+}
+
+#networks2 {
+  top: 110%;
+  left: 2%;
+  position: absolute;
+  z-index: 20;
+}
+
 
 #scr1 {
   top: 100%;
