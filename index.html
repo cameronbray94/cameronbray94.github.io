@@ -9,22 +9,15 @@
     <link rel="icon" type="image/png" href="img/myfavicon.png" sizes="96x96">  
   </head>
 
-  
-    <!-- <div id="navbar">
-      <a href="index.html">
-        <div class="nav-item">CAMERON BRAY</div>
-      </a>
-    </div> -->
 
-      <!-- <div class="embeddedObservable" id="observablehq-f6999f2f" style="width:90%"></div>
-      <script type="module">
-      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-      import define from "https://api.observablehq.com/@cameronbray/website-homepage-test.js?v=3";
-      const inspect = Inspector.into("#observablehq-f6999f2f");
-      (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-      </script> -->
-
-      <iframe width="100%" height="984" frameborder="0"
-  src="https://observablehq.com/embed/@cameronbray/website-homepage-test?cell=chart"></iframe>
+        <div class="chart"></div>
+        
+        <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@cameronbray/website-homepage-2.js?v=3";
+        (new Runtime).module(define, name => {
+          if (name === "chart") return Inspector.into(".chart")();
+        });
+        </script>
 
 </html>
