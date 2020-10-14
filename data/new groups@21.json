@@ -10,7 +10,7 @@
     {"id": "bio", "group": 2, "url":"bio.html", "loc":""},
     {"id": "civic soup", "group": 3, "url":"https://www.civicsoup.co.uk", "loc":"_blank"}, 
     {"id": "CSM MArch", "group": 2, "url":"march.html", "loc":""},   
-    {"id": "MArch.broadcast", "group": 3, "url":"https://csmmar.ch/", "loc":""},
+    {"id": "MArch.broadcast", "group": 3, "url":"https://csmmar.ch/", "loc":"_blank"},
     {"id": "ESALA", "group": 3, "url":"https://www.eca.ed.ac.uk/edinburgh-school-architecture-and-landscape-architecture-esala", "loc":"_blank"},     
     {"id": "Surrey Canal Road", "group": 2, "url":"surreycanalroad.html", "loc":""},
     {"id": "Matter out of Place", "group": 2, "url":"civicwaste.html", "loc":""}, 
