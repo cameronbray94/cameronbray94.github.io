@@ -254,6 +254,10 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  colour: pink;
+}
+
 .embeddedObservable {
   width: 100%;
   margin: auto 0;
